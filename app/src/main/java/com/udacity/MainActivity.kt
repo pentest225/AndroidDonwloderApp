@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         custom_button.setOnClickListener {
             download()
         }
-        radioGroup = findViewById<RadioGroup>(R.id.radio_group)
+        radioGroup = findViewById(R.id.radio_group)
         radioGroup.setOnCheckedChangeListener {group,checkId ->
             val radioButton = findViewById<RadioButton>(checkId)
             when(checkId){

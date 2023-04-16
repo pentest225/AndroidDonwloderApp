@@ -19,6 +19,7 @@
             android:id="@+id/radio_group"
             >
             <RadioButton
+                android:layout_marginTop="@dimen/small"
                 android:padding="@dimen/small"
                 android:id="@+id/rb_glide_download"
                 android:text="@string/glide_loading_text"
@@ -27,6 +28,7 @@
 
             <RadioButton
                 android:padding="@dimen/small"
+                android:layout_marginTop="@dimen/small"
                 android:id="@+id/rb_app_download"
                 android:text="@string/load_app_loading_text"
                 android:layout_width="wrap_content"
@@ -34,6 +36,7 @@
 
             <RadioButton
                 android:padding="@dimen/small"
+                android:layout_marginTop="@dimen/small"
                 android:id="@+id/rb_retrofit_download"
                 android:text="@string/retrofit_loading_text"
                 android:layout_width="wrap_content"
