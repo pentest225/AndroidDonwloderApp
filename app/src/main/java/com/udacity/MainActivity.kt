@@ -9,6 +9,9 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.net.Uri
 import android.os.Bundle
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import kotlinx.android.synthetic.main.activity_main.*
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var notificationManager: NotificationManager
     private lateinit var pendingIntent: PendingIntent
     private lateinit var action: NotificationCompat.Action
+    private lateinit var radioGroup : RadioGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,25 @@ class MainActivity : AppCompatActivity() {
 
         custom_button.setOnClickListener {
             download()
+        }
+        radioGroup = findViewById<RadioGroup>(R.id.radio_group)
+        radioGroup.setOnCheckedChangeListener {group,checkId ->
+            val radioButton = findViewById<RadioButton>(checkId)
+            when(checkId){
+                R.id.rb_retrofit_download -> {
+                    Toast.makeText(this@MainActivity,radioButton.text,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity,"Retrofit Download",Toast.LENGTH_SHORT).show()
+                }
+                R.id.rb_glide_download -> {
+                    Toast.makeText(this@MainActivity,radioButton.text,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity,"GLIDE Download",Toast.LENGTH_SHORT).show()
+                }
+                R.id.rb_app_download -> {
+                    Toast.makeText(this@MainActivity,radioButton.text,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity,"App Download",Toast.LENGTH_SHORT).show()
+                }
+            }
+
         }
     }
 

@@ -9,6 +9,39 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+
+        <RadioGroup
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/custom_button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/small"
+            android:id="@+id/radio_group"
+            >
+            <RadioButton
+                android:padding="@dimen/small"
+                android:id="@+id/rb_glide_download"
+                android:text="@string/glide_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:padding="@dimen/small"
+                android:id="@+id/rb_app_download"
+                android:text="@string/load_app_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <RadioButton
+                android:padding="@dimen/small"
+                android:id="@+id/rb_retrofit_download"
+                android:text="@string/retrofit_loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RadioGroup>
+
     <com.udacity.LoadingButton
         android:id="@+id/custom_button"
         android:layout_width="0dp"
@@ -17,6 +50,6 @@
         android:layout_height="60dp"
         android:layout_margin="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
